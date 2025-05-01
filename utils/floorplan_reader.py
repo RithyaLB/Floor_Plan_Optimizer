@@ -1,6 +1,7 @@
 import re
 import pytesseract
 from PIL import Image
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 def clean_line(line):
     line = line.strip()
@@ -48,5 +49,5 @@ def extract_room_data_from_image(image_path):
         print(f"- {name} => {size}")
 
 # Run the function
-image_path = "static/uploads/floor_plan1.jpg"
+image_path = '../static/uploads/floor_plan1.jpg'
 extract_room_data_from_image(image_path)
